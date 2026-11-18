@@ -8,14 +8,14 @@
     </inertial>
     <visual>
       <geometry>
-        <mesh filename="package://flying_humanoid/meshes/base_link.dae"/>
+        <mesh filename="package://flying_humanoid/meshes/bi/base_link.dae"/>
       </geometry>
       <material name="__unnamed_material_1"/>
       <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://flying_humanoid/meshes/base_link.stl"/>
+        <mesh filename="package://flying_humanoid/meshes/bi/base_link.stl"/>
       </geometry>
       <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
     </collision>
@@ -28,14 +28,14 @@
     </inertial>
     <visual>
       <geometry>
-        <mesh filename="package://flying_humanoid/meshes/gimbal1_link.dae"/>
+        <mesh filename="package://flying_humanoid/meshes/bi/gimbal1_link.dae"/>
       </geometry>
       <material name="__unnamed_material_2"/>
       <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://flying_humanoid/meshes/gimbal1_link.stl"/>
+        <mesh filename="package://flying_humanoid/meshes/bi/gimbal1_link.stl"/>
       </geometry>
       <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
     </collision>
@@ -48,14 +48,14 @@
     </inertial>
     <visual>
       <geometry>
-        <mesh filename="package://flying_humanoid/meshes/thrust1.dae"/>
+        <mesh filename="package://flying_humanoid/meshes/bi/thrust1.dae"/>
       </geometry>
       <material name="__unnamed_material_3"/>
       <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://flying_humanoid/meshes/thrust1.stl"/>
+        <mesh filename="package://flying_humanoid/meshes/bi/thrust1.stl"/>
       </geometry>
       <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
     </collision>
@@ -68,14 +68,14 @@
     </inertial>
     <visual>
       <geometry>
-        <mesh filename="package://flying_humanoid/meshes/gimbal2_link.dae"/>
+        <mesh filename="package://flying_humanoid/meshes/bi/gimbal2_link.dae"/>
       </geometry>
       <material name="__unnamed_material_4"/>
       <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://flying_humanoid/meshes/gimbal2_link.stl"/>
+        <mesh filename="package://flying_humanoid/meshes/bi/gimbal2_link.stl"/>
       </geometry>
       <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
     </collision>
@@ -88,14 +88,14 @@
     </inertial>
     <visual>
       <geometry>
-        <mesh filename="package://flying_humanoid/meshes/thrust2.dae"/>
+        <mesh filename="package://flying_humanoid/meshes/bi/thrust2.dae"/>
       </geometry>
       <material name="__unnamed_material_5"/>
       <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://flying_humanoid/meshes/thrust2.stl"/>
+        <mesh filename="package://flying_humanoid/meshes/bi/thrust2.stl"/>
       </geometry>
       <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
     </collision>
@@ -108,14 +108,14 @@
     </inertial>
     <visual>
       <geometry>
-        <mesh filename="package://flying_humanoid/meshes/lleg_link1.dae"/>
+        <mesh filename="package://flying_humanoid/meshes/bi/lleg_link1.dae"/>
       </geometry>
       <material name="__unnamed_material_6"/>
       <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://flying_humanoid/meshes/lleg_link1.stl"/>
+        <mesh filename="package://flying_humanoid/meshes/bi/lleg_link1.stl"/>
       </geometry>
       <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
     </collision>
@@ -128,14 +128,14 @@
     </inertial>
     <visual>
       <geometry>
-        <mesh filename="package://flying_humanoid/meshes/lleg_link2.dae"/>
+        <mesh filename="package://flying_humanoid/meshes/bi/lleg_link2.dae"/>
       </geometry>
       <material name="__unnamed_material_7"/>
       <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://flying_humanoid/meshes/lleg_link2.stl"/>
+        <mesh filename="package://flying_humanoid/meshes/bi/lleg_link2.stl"/>
       </geometry>
       <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
     </collision>
@@ -148,14 +148,14 @@
     </inertial>
     <visual>
       <geometry>
-        <mesh filename="package://flying_humanoid/meshes/lleg_link3.dae"/>
+        <mesh filename="package://flying_humanoid/meshes/bi/lleg_link3.dae"/>
       </geometry>
       <material name="__unnamed_material_8"/>
       <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://flying_humanoid/meshes/lleg_link3.stl"/>
+        <mesh filename="package://flying_humanoid/meshes/bi/lleg_link3.stl"/>
       </geometry>
       <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
     </collision>
@@ -168,14 +168,14 @@
     </inertial>
     <visual>
       <geometry>
-        <mesh filename="package://flying_humanoid/meshes/lleg_link4.dae"/>
+        <mesh filename="package://flying_humanoid/meshes/bi/lleg_link4.dae"/>
       </geometry>
       <material name="__unnamed_material_9"/>
       <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://flying_humanoid/meshes/lleg_link4.stl"/>
+        <mesh filename="package://flying_humanoid/meshes/bi/lleg_link4.stl"/>
       </geometry>
       <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
     </collision>
@@ -188,14 +188,14 @@
     </inertial>
     <visual>
       <geometry>
-        <mesh filename="package://flying_humanoid/meshes/lleg_link5.dae"/>
+        <mesh filename="package://flying_humanoid/meshes/bi/lleg_link5.dae"/>
       </geometry>
       <material name="__unnamed_material_10"/>
       <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://flying_humanoid/meshes/lleg_link5.stl"/>
+        <mesh filename="package://flying_humanoid/meshes/bi/lleg_link5.stl"/>
       </geometry>
       <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
     </collision>
@@ -208,14 +208,14 @@
     </inertial>
     <visual>
       <geometry>
-        <mesh filename="package://flying_humanoid/meshes/lleg_link6.dae"/>
+        <mesh filename="package://flying_humanoid/meshes/bi/lleg_link6.dae"/>
       </geometry>
       <material name="__unnamed_material_11"/>
       <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://flying_humanoid/meshes/lleg_link6.stl"/>
+        <mesh filename="package://flying_humanoid/meshes/bi/lleg_link6.stl"/>
       </geometry>
       <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
     </collision>
@@ -228,14 +228,14 @@
     </inertial>
     <visual>
       <geometry>
-        <mesh filename="package://flying_humanoid/meshes/lfoot.dae"/>
+        <mesh filename="package://flying_humanoid/meshes/bi/lfoot.dae"/>
       </geometry>
       <material name="__unnamed_material_12"/>
       <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://flying_humanoid/meshes/lfoot.stl"/>
+        <mesh filename="package://flying_humanoid/meshes/bi/lfoot.stl"/>
       </geometry>
       <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
     </collision>
@@ -248,14 +248,14 @@
     </inertial>
     <visual>
       <geometry>
-        <mesh filename="package://flying_humanoid/meshes/rleg_link1.dae"/>
+        <mesh filename="package://flying_humanoid/meshes/bi/rleg_link1.dae"/>
       </geometry>
       <material name="__unnamed_material_13"/>
       <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://flying_humanoid/meshes/rleg_link1.stl"/>
+        <mesh filename="package://flying_humanoid/meshes/bi/rleg_link1.stl"/>
       </geometry>
       <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
     </collision>
@@ -268,14 +268,14 @@
     </inertial>
     <visual>
       <geometry>
-        <mesh filename="package://flying_humanoid/meshes/rleg_link2.dae"/>
+        <mesh filename="package://flying_humanoid/meshes/bi/rleg_link2.dae"/>
       </geometry>
       <material name="__unnamed_material_14"/>
       <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://flying_humanoid/meshes/rleg_link2.stl"/>
+        <mesh filename="package://flying_humanoid/meshes/bi/rleg_link2.stl"/>
       </geometry>
       <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
     </collision>
@@ -288,14 +288,14 @@
     </inertial>
     <visual>
       <geometry>
-        <mesh filename="package://flying_humanoid/meshes/rleg_link3.dae"/>
+        <mesh filename="package://flying_humanoid/meshes/bi/rleg_link3.dae"/>
       </geometry>
       <material name="__unnamed_material_15"/>
       <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://flying_humanoid/meshes/rleg_link3.stl"/>
+        <mesh filename="package://flying_humanoid/meshes/bi/rleg_link3.stl"/>
       </geometry>
       <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
     </collision>
@@ -308,14 +308,14 @@
     </inertial>
     <visual>
       <geometry>
-        <mesh filename="package://flying_humanoid/meshes/rleg_link4.dae"/>
+        <mesh filename="package://flying_humanoid/meshes/bi/rleg_link4.dae"/>
       </geometry>
       <material name="__unnamed_material_16"/>
       <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://flying_humanoid/meshes/rleg_link4.stl"/>
+        <mesh filename="package://flying_humanoid/meshes/bi/rleg_link4.stl"/>
       </geometry>
       <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
     </collision>
@@ -328,14 +328,14 @@
     </inertial>
     <visual>
       <geometry>
-        <mesh filename="package://flying_humanoid/meshes/rleg_link5.dae"/>
+        <mesh filename="package://flying_humanoid/meshes/bi/rleg_link5.dae"/>
       </geometry>
       <material name="__unnamed_material_17"/>
       <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://flying_humanoid/meshes/rleg_link5.stl"/>
+        <mesh filename="package://flying_humanoid/meshes/bi/rleg_link5.stl"/>
       </geometry>
       <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
     </collision>
@@ -348,14 +348,14 @@
     </inertial>
     <visual>
       <geometry>
-        <mesh filename="package://flying_humanoid/meshes/rleg_link6.dae"/>
+        <mesh filename="package://flying_humanoid/meshes/bi/rleg_link6.dae"/>
       </geometry>
       <material name="__unnamed_material_18"/>
       <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://flying_humanoid/meshes/rleg_link6.stl"/>
+        <mesh filename="package://flying_humanoid/meshes/bi/rleg_link6.stl"/>
       </geometry>
       <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
     </collision>
@@ -368,14 +368,14 @@
     </inertial>
     <visual>
       <geometry>
-        <mesh filename="package://flying_humanoid/meshes/rfoot.dae"/>
+        <mesh filename="package://flying_humanoid/meshes/bi/rfoot.dae"/>
       </geometry>
       <material name="__unnamed_material_19"/>
       <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://flying_humanoid/meshes/rfoot.stl"/>
+        <mesh filename="package://flying_humanoid/meshes/bi/rfoot.stl"/>
       </geometry>
       <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
     </collision>
@@ -388,14 +388,14 @@
     </inertial>
     <visual>
       <geometry>
-        <mesh filename="package://flying_humanoid/meshes/fc.dae"/>
+        <mesh filename="package://flying_humanoid/meshes/bi/fc.dae"/>
       </geometry>
       <material name="__unnamed_material_20"/>
       <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://flying_humanoid/meshes/fc.stl"/>
+        <mesh filename="package://flying_humanoid/meshes/bi/fc.stl"/>
       </geometry>
       <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
     </collision>
@@ -408,14 +408,14 @@
     </inertial>
     <visual>
       <geometry>
-        <mesh filename="package://flying_humanoid/meshes/t265_frame.dae"/>
+        <mesh filename="package://flying_humanoid/meshes/bi/t265_frame.dae"/>
       </geometry>
       <material name="__unnamed_material_21"/>
       <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://flying_humanoid/meshes/t265_frame.stl"/>
+        <mesh filename="package://flying_humanoid/meshes/bi/t265_frame.stl"/>
       </geometry>
       <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
     </collision>
