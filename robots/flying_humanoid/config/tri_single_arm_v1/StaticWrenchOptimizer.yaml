@@ -1,0 +1,44 @@
+# Static maximum-wrench problem for tri_single_arm_v1.
+# The end-effector output is a pure torque about the requested world axis.
+lfoot: lfoot
+rfoot: rfoot
+end_effector: arm_ee
+
+# Vertical wall x=0. The normal points from the wall toward the robot.
+wall_point: [0.0, 0.0, 0.0]
+wall_normal: [1.0, 0.0, 0.0]
+foot_parallel_tolerance: 0.001  # [rad]
+
+# Valve center on the wall, wall-normal EE offset, and turning axis. The arm_ee
+# origin is fixed at target_point + offset * wall_normal.
+ee_target_point: [0.0, 0.0, 1.0]
+ee_offset: 0.0  # [m], overridden by static_wrench_optimizer.launch
+ee_target_axis: [1.0, 0.0, 0.0]
+
+# Takeoff floor z=0. Wall contact and rotor centers are kept at least 5R above
+# it, where this surface-effect model differs from free air by less than about
+# 2% even at the least favorable tilt angle.
+floor_point: [0.0, 0.0, 0.0]
+floor_normal: [0.0, 0.0, 1.0]
+minimum_floor_clearance: 0.3175  # [m] = 5 * 0.0635 m
+
+# Hard contact-wrench-cone constraints.
+friction_coefficient: 0.7
+foot_size: [0.08, 0.05]  # full sole length and width [m]
+minimum_contact_force: 5.0  # [N], per foot
+
+surface_effect:
+  rotor_radius: 0.0635  # [m], 2.5-inch radius of a 5-inch-diameter propeller
+  a0: -6.8407
+  a1: 1.6194
+  b1: 7.2711
+
+initialize_for_wall: true
+root_translation_limit: 1.0  # [m], each world direction about the reference
+contact_wrench_limit: 1000.0
+maximum_ee_torque: 100.0  # [Nm], numerical safety bound
+
+max_iterations: 2000
+tolerance: 1.0e-6
+finite_difference_step: 1.0e-6
+print_level: 5

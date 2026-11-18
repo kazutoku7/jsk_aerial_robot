@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="airframe" default="tri_single_arm_v1" />
+  <arg name="robot_model" default="$(find flying_humanoid)/robots/$(arg airframe)/robot.urdf.xacro" />
+  <arg name="config" default="$(find flying_humanoid)/config/$(arg airframe)/StaticWrenchOptimizer.yaml" />
+  <arg name="ee_offset" default="0.05" />
+  <arg name="ee_axis" default="[1, 0, 0]" />
+  <arg name="offset_id" default="$(eval '{:.3f}m'.format(float(arg('ee_offset'))))" />
+  <arg name="axis_id" default="$(eval arg('ee_axis').strip('[]').replace(',', '_').replace(' ', ''))" />
+  <arg name="result_root" default="$(find flying_humanoid)/results/static_wrench" />
+  <arg name="result_dir" default="$(arg result_root)/offset_$(arg offset_id)" />
+  <arg name="result" default="$(arg result_dir)/axis_$(arg axis_id).yaml" />
+  <arg name="print_level" default="5" />
+  <arg name="max_iterations" default="2000" />
+
+  <param name="robot_description" command="$(find xacro)/xacro --inorder $(arg robot_model)" />
+  <rosparam file="$(find flying_humanoid)/config/MotorInfo.yaml" command="load" />
+
+  <node pkg="flying_humanoid" type="static_wrench_optimizer" name="static_wrench_optimizer"
+        output="screen" required="true">
+    <rosparam file="$(arg config)" command="load" />
+    <param name="ee_offset" value="$(arg ee_offset)" />
+    <rosparam param="ee_target_axis" subst_value="true">$(arg ee_axis)</rosparam>
+    <param name="print_level" value="$(arg print_level)" />
+    <param name="max_iterations" value="$(arg max_iterations)" />
+    <param name="output" value="$(arg result)" />
+  </node>
+</launch>
