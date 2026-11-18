@@ -1,0 +1,728 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<robot name="dynman_tri_single_arm_v1">
+  <link name="base_link">
+    <inertial>
+      <origin xyz="0.0045612 -1.7715e-05 0.026168" rpy="0.0 -0.0 0.0"/>
+      <mass value="0.86372"/>
+      <inertia ixx="0.00077023" ixy="-3.1648e-07" ixz="1.2743e-06" iyy="0.00015548" iyz="-1.1707e-08" izz="0.00081586"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://flying_humanoid/meshes/tri_single_arm_v1/base_link.dae"/>
+      </geometry>
+      <material name="__unnamed_material_1"/>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://flying_humanoid/meshes/tri_single_arm_v1/base_link.stl"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </collision>
+  </link>
+  <link name="gimbal1_link">
+    <inertial>
+      <origin xyz="-4.09486484314018e-05 0.082162100035066 -0.000599923029990304" rpy="0.0 -0.0 0.0"/>
+      <mass value="0.208436594218048"/>
+      <inertia ixx="0.000263187444083224" ixy="-1.47823177516705e-07" ixz="-1.00818660206325e-07" iyy="0.000185395994692586" iyz="-1.45759717859279e-07" izz="0.000366517950424831"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://flying_humanoid/meshes/tri_single_arm_v1/gimbal1_link.dae"/>
+      </geometry>
+      <material name="__unnamed_material_2"/>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://flying_humanoid/meshes/tri_single_arm_v1/gimbal1_link.stl"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </collision>
+  </link>
+  <link name="thrust1">
+    <inertial>
+      <origin xyz="-3.02660032868579e-06 -1.60026849285455e-05 -0.000507140917013746" rpy="0.0 -0.0 0.0"/>
+      <mass value="0.00728857489841408"/>
+      <inertia ixx="3.41913180053977e-06" ixy="1.12781069380394e-09" ixz="6.60815652567828e-10" iyy="3.42948683417074e-06" iyz="-3.91479570342851e-10" izz="6.80956656461761e-06"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://flying_humanoid/meshes/tri_single_arm_v1/thrust1.dae"/>
+      </geometry>
+      <material name="__unnamed_material_3"/>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://flying_humanoid/meshes/tri_single_arm_v1/thrust1.stl"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </collision>
+  </link>
+  <link name="gimbal2_link">
+    <inertial>
+      <origin xyz="4.11017589611856e-05 -0.0821581900285153 -0.000597415501406004" rpy="0.0 -0.0 0.0"/>
+      <mass value="0.208391344697115"/>
+      <inertia ixx="0.000263177939131682" ixy="-1.47644181330507e-07" ixz="1.00804727524067e-07" iyy="0.000185385092422528" iyz="1.45772647437059e-07" izz="0.00036649650325594"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://flying_humanoid/meshes/tri_single_arm_v1/gimbal2_link.dae"/>
+      </geometry>
+      <material name="__unnamed_material_4"/>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://flying_humanoid/meshes/tri_single_arm_v1/gimbal2_link.stl"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </collision>
+  </link>
+  <link name="thrust2">
+    <inertial>
+      <origin xyz="-3.02660032912988e-06 -1.60026849284067e-05 -0.000507140917015064" rpy="0.0 -0.0 0.0"/>
+      <mass value="0.00728857489841407"/>
+      <inertia ixx="3.41913180053977e-06" ixy="1.12781069374517e-09" ixz="6.60815652561329e-10" iyy="3.42948683417068e-06" iyz="-3.91479570341158e-10" izz="6.80956656461755e-06"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://flying_humanoid/meshes/tri_single_arm_v1/thrust2.dae"/>
+      </geometry>
+      <material name="__unnamed_material_5"/>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://flying_humanoid/meshes/tri_single_arm_v1/thrust2.stl"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </collision>
+  </link>
+  <link name="lleg_link1">
+    <inertial>
+      <origin xyz="0.0037361328140268 9.0205620750794e-17 -0.0122247267180572" rpy="0.0 -0.0 0.0"/>
+      <mass value="0.0097986218901311"/>
+      <inertia ixx="1.13401894780692e-06" ixy="-5.07778692698834e-22" ixz="-4.85772209379069e-23" iyy="2.67999985839356e-06" iyz="3.9307438878878e-22" izz="2.48302309178415e-06"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://flying_humanoid/meshes/tri_single_arm_v1/lleg_link1.dae"/>
+      </geometry>
+      <material name="__unnamed_material_6"/>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://flying_humanoid/meshes/tri_single_arm_v1/lleg_link1.stl"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </collision>
+  </link>
+  <link name="lleg_link2">
+    <inertial>
+      <origin xyz="0.00121779729336062 -0.00018535772508313 -0.0118603137318174" rpy="0.0 -0.0 0.0"/>
+      <mass value="0.171467681502272"/>
+      <inertia ixx="4.33216587151279e-05" ixy="-2.01147707204263e-14" ixz="-7.82575764583559e-08" iyy="4.28359556124917e-05" iyz="-2.95357715211413e-09" izz="2.69075133791409e-05"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://flying_humanoid/meshes/tri_single_arm_v1/lleg_link2.dae"/>
+      </geometry>
+      <material name="__unnamed_material_7"/>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://flying_humanoid/meshes/tri_single_arm_v1/lleg_link2.stl"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </collision>
+  </link>
+  <link name="lleg_link3">
+    <inertial>
+      <origin xyz="1.0207763453951e-16 -2.08166817117217e-16 -0.0451765261612268" rpy="0.0 -0.0 0.0"/>
+      <mass value="0.0259013177728722"/>
+      <inertia ixx="1.36371387513421e-05" ixy="3.3445520501787e-21" ixz="-3.46170423517399e-21" iyy="8.00755776441513e-06" iyz="-3.89493098361381e-21" izz="9.0668945844122e-06"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://flying_humanoid/meshes/tri_single_arm_v1/lleg_link3.dae"/>
+      </geometry>
+      <material name="__unnamed_material_8"/>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://flying_humanoid/meshes/tri_single_arm_v1/lleg_link3.stl"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </collision>
+  </link>
+  <link name="lleg_link4">
+    <inertial>
+      <origin xyz="-3.32281787263251e-11 0.000343045700662556 -0.0180270993215241" rpy="0.0 -0.0 0.0"/>
+      <mass value="0.104676662488224"/>
+      <inertia ixx="2.65795041807224e-05" ixy="2.45659430424921e-14" ixz="1.17232768393109e-13" iyy="2.15032891223686e-05" iyz="-3.79683910579719e-08" izz="1.72526192993166e-05"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://flying_humanoid/meshes/tri_single_arm_v1/lleg_link4.dae"/>
+      </geometry>
+      <material name="__unnamed_material_9"/>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://flying_humanoid/meshes/tri_single_arm_v1/lleg_link4.stl"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </collision>
+  </link>
+  <link name="lleg_link5">
+    <inertial>
+      <origin xyz="-0.000495972868520312 0.000495880280494611 -0.0119998508135957" rpy="0.0 -0.0 0.0"/>
+      <mass value="0.102451754960909"/>
+      <inertia ixx="2.59064756128004e-05" ixy="-6.19205777033339e-07" ixz="-1.04898526898669e-09" iyy="2.59065052997199e-05" iyz="-1.38652120793729e-09" izz="1.84144834881117e-05"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://flying_humanoid/meshes/tri_single_arm_v1/lleg_link5.dae"/>
+      </geometry>
+      <material name="__unnamed_material_10"/>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://flying_humanoid/meshes/tri_single_arm_v1/lleg_link5.stl"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </collision>
+  </link>
+  <link name="lleg_link6">
+    <inertial>
+      <origin xyz="-7.91467585914418e-18 2.25734084202678e-11 -0.0179010408457837" rpy="0.0 -0.0 0.0"/>
+      <mass value="0.0105507218843962"/>
+      <inertia ixx="1.02387314052852e-06" ixy="-9.73392872441852e-15" ixz="3.26470949297841e-16" iyy="2.63144399211797e-06" iyz="-5.51167449634976e-19" izz="2.43642538296032e-06"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://flying_humanoid/meshes/tri_single_arm_v1/lleg_link6.dae"/>
+      </geometry>
+      <material name="__unnamed_material_11"/>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://flying_humanoid/meshes/tri_single_arm_v1/lleg_link6.stl"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </collision>
+  </link>
+  <link name="lfoot">
+    <inertial>
+      <origin xyz="-4.50393845483066e-15 -0.00300412353859036 0.00199769771003927" rpy="0.0 -0.0 0.0"/>
+      <mass value="0.0214784808160566"/>
+      <inertia ixx="6.4504688120943e-06" ixy="-7.93032732298303e-22" ixz="8.82838763178172e-22" iyy="1.55176228617392e-05" iyz="7.29483035052568e-08" izz="2.18710186339895e-05"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://flying_humanoid/meshes/tri_single_arm_v1/lfoot.dae"/>
+      </geometry>
+      <material name="__unnamed_material_12"/>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://flying_humanoid/meshes/tri_single_arm_v1/lfoot.stl"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </collision>
+  </link>
+  <link name="rleg_link1">
+    <inertial>
+      <origin xyz="0.00373613281403144 5.55111512312578e-17 -0.0122247267180571" rpy="0.0 -0.0 0.0"/>
+      <mass value="0.0097986218901311"/>
+      <inertia ixx="1.13401894780692e-06" ixy="-1.89955024193196e-22" ixz="-1.50050920975699e-22" iyy="2.67999985839356e-06" iyz="2.30603537737921e-22" izz="2.48302309178415e-06"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://flying_humanoid/meshes/tri_single_arm_v1/rleg_link1.dae"/>
+      </geometry>
+      <material name="__unnamed_material_13"/>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://flying_humanoid/meshes/tri_single_arm_v1/rleg_link1.stl"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </collision>
+  </link>
+  <link name="rleg_link2">
+    <inertial>
+      <origin xyz="0.00121779729336122 -0.000185357725083192 -0.0118603137318175" rpy="0.0 -0.0 0.0"/>
+      <mass value="0.171467681502272"/>
+      <inertia ixx="4.33216587151279e-05" ixy="-2.01148790602565e-14" ixz="-7.82575764578821e-08" iyy="4.28359556124917e-05" iyz="-2.95357715211718e-09" izz="2.69075133791408e-05"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://flying_humanoid/meshes/tri_single_arm_v1/rleg_link2.dae"/>
+      </geometry>
+      <material name="__unnamed_material_14"/>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://flying_humanoid/meshes/tri_single_arm_v1/rleg_link2.stl"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </collision>
+  </link>
+  <link name="rleg_link3">
+    <inertial>
+      <origin xyz="-3.60242434840896e-15 -1.45716771982052e-16 -0.0451765261612268" rpy="0.0 -0.0 0.0"/>
+      <mass value="0.0259013177728723"/>
+      <inertia ixx="1.36371387513421e-05" ixy="2.63195304490157e-21" ixz="1.03337242526479e-21" iyy="8.00755776441515e-06" iyz="-3.46124907546119e-21" izz="9.0668945844122e-06"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://flying_humanoid/meshes/tri_single_arm_v1/rleg_link3.dae"/>
+      </geometry>
+      <material name="__unnamed_material_15"/>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://flying_humanoid/meshes/tri_single_arm_v1/rleg_link3.stl"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </collision>
+  </link>
+  <link name="rleg_link4">
+    <inertial>
+      <origin xyz="3.32290007142022e-11 -0.000343045700660724 -0.018027099321524" rpy="0.0 -0.0 0.0"/>
+      <mass value="0.104676662488236"/>
+      <inertia ixx="2.65795041807226e-05" ixy="2.45659063086966e-14" ixz="-1.17232404277239e-13" iyy="2.15032891223695e-05" iyz="3.79683910579881e-08" izz="1.72526192993173e-05"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://flying_humanoid/meshes/tri_single_arm_v1/rleg_link4.dae"/>
+      </geometry>
+      <material name="__unnamed_material_16"/>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://flying_humanoid/meshes/tri_single_arm_v1/rleg_link4.stl"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </collision>
+  </link>
+  <link name="rleg_link5">
+    <inertial>
+      <origin xyz="0.000495972868520303 -0.000495880280494611 -0.0119998508135958" rpy="0.0 -0.0 0.0"/>
+      <mass value="0.102451754960908"/>
+      <inertia ixx="2.59064756128003e-05" ixy="-6.1920577703334e-07" ixz="1.04898526897878e-09" iyy="2.59065052997198e-05" iyz="1.38652120794112e-09" izz="1.84144834881117e-05"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://flying_humanoid/meshes/tri_single_arm_v1/rleg_link5.dae"/>
+      </geometry>
+      <material name="__unnamed_material_17"/>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://flying_humanoid/meshes/tri_single_arm_v1/rleg_link5.stl"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </collision>
+  </link>
+  <link name="rleg_link6">
+    <inertial>
+      <origin xyz="-1.52447066201124e-10 2.25733737257983e-11 -0.0179010408457839" rpy="0.0 -0.0 0.0"/>
+      <mass value="0.0105507218843962"/>
+      <inertia ixx="1.02387314052852e-06" ixy="-9.73392688831958e-15" ixz="3.26471686428489e-16" iyy="2.63144399211797e-06" iyz="-5.52110771296252e-19" izz="2.43642538296032e-06"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://flying_humanoid/meshes/tri_single_arm_v1/rleg_link6.dae"/>
+      </geometry>
+      <material name="__unnamed_material_18"/>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://flying_humanoid/meshes/tri_single_arm_v1/rleg_link6.stl"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </collision>
+  </link>
+  <link name="rfoot">
+    <inertial>
+      <origin xyz="3.21465944141952e-17 0.00300412353859045 0.00199769771003927" rpy="0.0 -0.0 0.0"/>
+      <mass value="0.0214784808160566"/>
+      <inertia ixx="6.45046881209431e-06" ixy="-9.43973111486172e-22" ixz="2.57387226000946e-22" iyy="1.55176228617392e-05" iyz="-7.29483035052565e-08" izz="2.18710186339895e-05"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://flying_humanoid/meshes/tri_single_arm_v1/rfoot.dae"/>
+      </geometry>
+      <material name="__unnamed_material_19"/>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://flying_humanoid/meshes/tri_single_arm_v1/rfoot.stl"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </collision>
+  </link>
+  <link name="fc">
+    <inertial>
+      <origin xyz="0.0187002711762504 0.00169857185106267 -0.00124990288613966" rpy="0.0 -0.0 0.0"/>
+      <mass value="0.0134869851236441"/>
+      <inertia ixx="1.81746685538829e-06" ixy="3.5211168082621e-09" ixz="2.41443532311906e-11" iyy="1.8130940325531e-06" iyz="-1.82051260717886e-10" izz="3.61332371662151e-06"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://flying_humanoid/meshes/tri_single_arm_v1/fc.dae"/>
+      </geometry>
+      <material name="__unnamed_material_20"/>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://flying_humanoid/meshes/tri_single_arm_v1/fc.stl"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </collision>
+  </link>
+  <link name="gimbal3_link">
+    <inertial>
+      <origin xyz="-0.0821620420021962 -4.09184712662474e-05 -0.000599919754889183" rpy="0.0 -0.0 0.0"/>
+      <mass value="0.208436273085101"/>
+      <inertia ixx="0.000185395837312155" ixy="1.48014283977094e-07" ixz="1.45818331847857e-07" iyy="0.000263187189124937" iyz="-1.00781864881936e-07" izz="0.000366517576375103"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://flying_humanoid/meshes/tri_single_arm_v1/gimbal3_link.dae"/>
+      </geometry>
+      <material name="__unnamed_material_21"/>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://flying_humanoid/meshes/tri_single_arm_v1/gimbal3_link.stl"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </collision>
+  </link>
+  <link name="thrust3">
+    <inertial>
+      <origin xyz="-3.02660052900472e-06 -1.60026848402908e-05 -0.000507140917344565" rpy="0.0 -0.0 0.0"/>
+      <mass value="0.007288574897393"/>
+      <inertia ixx="3.41913180051258e-06" ixy="1.12781069468206e-09" ixz="6.60815657365097e-10" iyy="3.42948683416275e-06" iyz="-3.91479573668436e-10" izz="6.80956656459645e-06"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://flying_humanoid/meshes/tri_single_arm_v1/thrust3.dae"/>
+      </geometry>
+      <material name="__unnamed_material_22"/>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://flying_humanoid/meshes/tri_single_arm_v1/thrust3.stl"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </collision>
+  </link>
+  <link name="arm_link1">
+    <inertial>
+      <origin xyz="-7.79828925508153e-06 -0.000364981389620763 -0.0715681981715993" rpy="0.0 -0.0 0.0"/>
+      <mass value="0.0801114141734309"/>
+      <inertia ixx="2.64313323437325e-05" ixy="6.8030654631758e-09" ixz="5.73066771897801e-09" iyy="2.03716449702496e-05" iyz="-3.32154260505899e-07" izz="1.63634070116935e-05"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://flying_humanoid/meshes/tri_single_arm_v1/arm_link1.dae"/>
+      </geometry>
+      <material name="__unnamed_material_23"/>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://flying_humanoid/meshes/tri_single_arm_v1/arm_link1.stl"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </collision>
+  </link>
+  <link name="arm_link2">
+    <inertial>
+      <origin xyz="2.63677968348475e-16 3.96917043687215e-16 -0.0376726283599498" rpy="0.0 -0.0 0.0"/>
+      <mass value="0.0182031705615091"/>
+      <inertia ixx="1.10161902813963e-05" ixy="-8.36154985923863e-21" ixz="2.44475006464663e-20" iyy="6.98862436637351e-06" iyz="1.50747500914912e-22" izz="6.64292288107576e-06"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://flying_humanoid/meshes/tri_single_arm_v1/arm_link2.dae"/>
+      </geometry>
+      <material name="__unnamed_material_24"/>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://flying_humanoid/meshes/tri_single_arm_v1/arm_link2.stl"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </collision>
+  </link>
+  <link name="arm_ee"/>
+  <joint name="gimbal1" type="revolute">
+    <dynamics damping="0.9" friction="0.05"/>
+    <limit effort="1.5" velocity="6.0" lower="-6.28" upper="6.28"/>
+    <parent link="base_link"/>
+    <child link="gimbal1_link"/>
+    <axis xyz="0. 1. 0."/>
+    <origin xyz="0.04825 0.0975 0.07725" rpy="0.0 -0.0 0.0"/>
+  </joint>
+  <joint name="rotor1" type="continuous">
+    <limit effort="100.0" velocity="0.0" lower="0.0" upper="20.0"/>
+    <parent link="gimbal1_link"/>
+    <child link="thrust1"/>
+    <axis xyz="0. 0. 1."/>
+    <origin xyz="0.0 0.0905 0.021125" rpy="0.0 -0.0 0.0"/>
+  </joint>
+  <joint name="gimbal2" type="revolute">
+    <dynamics damping="0.9" friction="0.05"/>
+    <limit effort="1.5" velocity="6.0" lower="-6.28" upper="6.28"/>
+    <parent link="base_link"/>
+    <child link="gimbal2_link"/>
+    <axis xyz="0. 1. 0."/>
+    <origin xyz="0.04825 -0.0975 0.07725" rpy="0.0 -0.0 0.0"/>
+  </joint>
+  <joint name="rotor2" type="continuous">
+    <limit effort="100.0" velocity="0.0" lower="0.0" upper="20.0"/>
+    <parent link="gimbal2_link"/>
+    <child link="thrust2"/>
+    <axis xyz="0. 0. -1."/>
+    <origin xyz="0.0 -0.0905 0.021125" rpy="0.0 -0.0 0.0"/>
+  </joint>
+  <joint name="lleg_joint1" type="revolute">
+    <dynamics damping="0.9" friction="0.05"/>
+    <limit effort="1.5" velocity="6.0" lower="-1.57" upper="1.57"/>
+    <parent link="base_link"/>
+    <child link="lleg_link1"/>
+    <axis xyz="0. 0. 1."/>
+    <origin xyz="0.0 0.04 -0.0375" rpy="0.0 -0.0 0.0"/>
+  </joint>
+  <joint name="lleg_joint2" type="revolute">
+    <limit effort="1.8" velocity="6.0" lower="-1.57" upper="1.57"/>
+    <parent link="lleg_link1"/>
+    <child link="lleg_link2"/>
+    <axis xyz="1. 0. 0."/>
+    <origin xyz="-0.0205 0.0 -0.028" rpy="0.0 -0.0 0.0"/>
+  </joint>
+  <joint name="lleg_joint3" type="revolute">
+    <limit effort="1.8" velocity="6.0" lower="-1.85" upper="2.0"/>
+    <parent link="lleg_link2"/>
+    <child link="lleg_link3"/>
+    <axis xyz="0. 1. 0."/>
+    <origin xyz="0.02005 0.0 -0.00025" rpy="0.0 -0.0 0.0"/>
+  </joint>
+  <joint name="lleg_joint4" type="revolute">
+    <limit effort="1.5" velocity="6.0" lower="-2.0" upper="2.0"/>
+    <parent link="lleg_link3"/>
+    <child link="lleg_link4"/>
+    <axis xyz="0. 1. 0."/>
+    <origin xyz="0.0 0.0 -0.083" rpy="0.0 -0.0 0.0"/>
+  </joint>
+  <joint name="lleg_joint5" type="revolute">
+    <limit effort="1.8" velocity="6.0" lower="-1.7" upper="1.7"/>
+    <parent link="lleg_link4"/>
+    <child link="lleg_link5"/>
+    <axis xyz="0. 1. 0."/>
+    <origin xyz="0.0 0.0 -0.0685" rpy="0.0 -0.0 0.0"/>
+  </joint>
+  <joint name="lleg_joint6" type="revolute">
+    <limit effort="1.8" velocity="6.0" lower="-1.75" upper="1.75"/>
+    <parent link="lleg_link5"/>
+    <child link="lleg_link6"/>
+    <axis xyz="1. 0. 0."/>
+    <origin xyz="0.0 0.0 -0.024" rpy="0.0 -0.0 0.0"/>
+  </joint>
+  <joint name="lfoot_joint" type="fixed">
+    <limit effort="0.0" velocity="0.0"/>
+    <parent link="lleg_link6"/>
+    <child link="lfoot"/>
+    <axis xyz="0. 0. 0."/>
+    <origin xyz="0.0 0.012 -0.033" rpy="0.0 -0.0 0.0"/>
+  </joint>
+  <joint name="rleg_joint1" type="revolute">
+    <limit effort="1.5" velocity="6.0" lower="-1.57" upper="1.57"/>
+    <parent link="base_link"/>
+    <child link="rleg_link1"/>
+    <axis xyz="0. 0. 1."/>
+    <origin xyz="0.0 -0.04 -0.0375" rpy="0.0 -0.0 0.0"/>
+  </joint>
+  <joint name="rleg_joint2" type="revolute">
+    <limit effort="1.8" velocity="6.0" lower="-1.57" upper="1.57"/>
+    <parent link="rleg_link1"/>
+    <child link="rleg_link2"/>
+    <axis xyz="1. 0. 0."/>
+    <origin xyz="-0.0205 0.0 -0.028" rpy="0.0 -0.0 0.0"/>
+  </joint>
+  <joint name="rleg_joint3" type="revolute">
+    <limit effort="1.8" velocity="6.0" lower="-1.85" upper="2.0"/>
+    <parent link="rleg_link2"/>
+    <child link="rleg_link3"/>
+    <axis xyz="0. 1. 0."/>
+    <origin xyz="0.02005 0.0 -0.00025" rpy="0.0 -0.0 0.0"/>
+  </joint>
+  <joint name="rleg_joint4" type="revolute">
+    <limit effort="1.5" velocity="6.0" lower="-2.0" upper="2.0"/>
+    <parent link="rleg_link3"/>
+    <child link="rleg_link4"/>
+    <axis xyz="0. 1. 0."/>
+    <origin xyz="0.0 0.0 -0.083" rpy="0.0 -0.0 0.0"/>
+  </joint>
+  <joint name="rleg_joint5" type="revolute">
+    <limit effort="1.8" velocity="6.0" lower="-1.7" upper="1.7"/>
+    <parent link="rleg_link4"/>
+    <child link="rleg_link5"/>
+    <axis xyz="0. 1. 0."/>
+    <origin xyz="0.0 0.0 -0.0685" rpy="0.0 -0.0 0.0"/>
+  </joint>
+  <joint name="rleg_joint6" type="revolute">
+    <limit effort="1.8" velocity="6.0" lower="-1.75" upper="1.75"/>
+    <parent link="rleg_link5"/>
+    <child link="rleg_link6"/>
+    <axis xyz="1. 0. 0."/>
+    <origin xyz="0.0 0.0 -0.024" rpy="0.0 -0.0 0.0"/>
+  </joint>
+  <joint name="rfoot_joint" type="fixed">
+    <limit effort="0.0" velocity="0.0"/>
+    <parent link="rleg_link6"/>
+    <child link="rfoot"/>
+    <axis xyz="0. 0. 0."/>
+    <origin xyz="0.0 -0.012 -0.033" rpy="0.0 -0.0 0.0"/>
+  </joint>
+  <joint name="fc_joint" type="fixed">
+    <limit effort="0.0" velocity="0.0"/>
+    <parent link="base_link"/>
+    <child link="fc"/>
+    <axis xyz="0. 0. 0."/>
+    <origin xyz="-0.0173 -0.0011 0.057927" rpy="0.0 -0.0 0.0"/>
+  </joint>
+  <joint name="gimbal3" type="revolute">
+    <dynamics damping="0.9" friction="0.05"/>
+    <limit effort="1.5" velocity="6.0" lower="-6.28" upper="6.28"/>
+    <parent link="base_link"/>
+    <child link="gimbal3_link"/>
+    <axis xyz="1. 0. 0."/>
+    <origin xyz="-0.089 0.0 0.07725" rpy="0.0 -0.0 0.0"/>
+  </joint>
+  <joint name="rotor3" type="continuous">
+    <limit effort="100.0" velocity="0.0" lower="0.0" upper="20.0"/>
+    <parent link="gimbal3_link"/>
+    <child link="thrust3"/>
+    <axis xyz="0. 0. 1."/>
+    <origin xyz="-0.0905 0.0 0.021125" rpy="0.0 -0.0 0.0"/>
+  </joint>
+  <joint name="arm_joint1" type="revolute">
+    <limit effort="1.5" velocity="0.6" lower="-1.57" upper="1.57"/>
+    <parent link="base_link"/>
+    <child link="arm_link1"/>
+    <axis xyz="0. 1. 0."/>
+    <origin xyz="0.06525 0.0 0.01425" rpy="0.0 -0.0 0.0"/>
+  </joint>
+  <joint name="arm_joint2" type="revolute">
+    <limit effort="1.5" velocity="0.6" lower="-1.57" upper="1.57"/>
+    <parent link="arm_link1"/>
+    <child link="arm_link2"/>
+    <axis xyz="0. 1. 0."/>
+    <origin xyz="0.0 0.0 -0.0955" rpy="0.0 -0.0 0.0"/>
+  </joint>
+  <joint name="arm_ee_joint" type="fixed">
+    <limit effort="0.0" velocity="0.0"/>
+    <parent link="arm_link2"/>
+    <child link="arm_ee"/>
+    <axis xyz="0. 0. 0."/>
+    <origin xyz="0.0 0.0 -0.055" rpy="0.0 -0.0 0.0"/>
+  </joint>
+  <material name="__unnamed_material_1">
+    <color rgba="0.75294118 0.75294118 0.75294118 1.        "/>
+  </material>
+  <material name="__unnamed_material_2">
+    <color rgba="0.75294118 0.75294118 0.75294118 1.        "/>
+  </material>
+  <material name="__unnamed_material_3">
+    <color rgba="0.49803922 0.49803922 0.49803922 1.        "/>
+  </material>
+  <material name="__unnamed_material_4">
+    <color rgba="0.75294118 0.75294118 0.75294118 1.        "/>
+  </material>
+  <material name="__unnamed_material_5">
+    <color rgba="0.49803922 0.49803922 0.49803922 1.        "/>
+  </material>
+  <material name="__unnamed_material_6">
+    <color rgba="0.75294118 0.75294118 0.75294118 1.        "/>
+  </material>
+  <material name="__unnamed_material_7">
+    <color rgba="0.75294118 0.75294118 0.75294118 1.        "/>
+  </material>
+  <material name="__unnamed_material_8">
+    <color rgba="0.75294118 0.75294118 0.75294118 1.        "/>
+  </material>
+  <material name="__unnamed_material_9">
+    <color rgba="0.75294118 0.75294118 0.75294118 1.        "/>
+  </material>
+  <material name="__unnamed_material_10">
+    <color rgba="0.75294118 0.75294118 0.75294118 1.        "/>
+  </material>
+  <material name="__unnamed_material_11">
+    <color rgba="0.75294118 0.75294118 0.75294118 1.        "/>
+  </material>
+  <material name="__unnamed_material_12">
+    <color rgba="0.75294118 0.75294118 0.75294118 1.        "/>
+  </material>
+  <material name="__unnamed_material_13">
+    <color rgba="0.75294118 0.75294118 0.75294118 1.        "/>
+  </material>
+  <material name="__unnamed_material_14">
+    <color rgba="0.75294118 0.75294118 0.75294118 1.        "/>
+  </material>
+  <material name="__unnamed_material_15">
+    <color rgba="0.75294118 0.75294118 0.75294118 1.        "/>
+  </material>
+  <material name="__unnamed_material_16">
+    <color rgba="0.75294118 0.75294118 0.75294118 1.        "/>
+  </material>
+  <material name="__unnamed_material_17">
+    <color rgba="0.75294118 0.75294118 0.75294118 1.        "/>
+  </material>
+  <material name="__unnamed_material_18">
+    <color rgba="0.75294118 0.75294118 0.75294118 1.        "/>
+  </material>
+  <material name="__unnamed_material_19">
+    <color rgba="0.75294118 0.75294118 0.75294118 1.        "/>
+  </material>
+  <material name="__unnamed_material_20">
+    <color rgba="1. 1. 1. 1."/>
+  </material>
+  <material name="__unnamed_material_21">
+    <color rgba="0.75294118 0.75294118 0.75294118 1.        "/>
+  </material>
+  <material name="__unnamed_material_22">
+    <color rgba="0.49803922 0.49803922 0.49803922 1.        "/>
+  </material>
+  <material name="__unnamed_material_23">
+    <color rgba="0.75294118 0.75294118 0.75294118 1.        "/>
+  </material>
+  <material name="__unnamed_material_24">
+    <color rgba="0.75294118 0.75294118 0.75294118 1.        "/>
+  </material>
+</robot>

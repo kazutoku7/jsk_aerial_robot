@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="real_machine" default="false" />
+  <arg name="simulation" default="false" />
+  <arg name="robot_ns" default="flying_humanoid" />
+
+  <group ns="$(arg robot_ns)">
+    <group if="$(arg real_machine)">
+      <group unless="$(arg simulation)">
+        <!-- FC, IMU and GPS -->
+        <include file="$(find spinal)/launch/bridge.launch">
+          <arg name="mode" value="serial" />
+          <arg name="serial_port" value="/dev/flight_controller" />
+        </include>
+
+        <!-- The tri airframe has no T265 and uses mocap in the lab. -->
+        <include file="$(find aerial_robot_base)/launch/external_module/mocap.launch" />
+      </group>
+    </group>
+
+    <rosparam file="$(find aerial_robot_base)/config/sensors/imu/spinal.yaml" command="load" />
+    <rosparam file="$(find aerial_robot_base)/config/sensors/mocap.yaml" command="load" />
+  </group>
+</launch>

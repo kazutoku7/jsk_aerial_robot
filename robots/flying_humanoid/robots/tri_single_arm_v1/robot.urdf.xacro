@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<robot name="flying_humanoid_tri_single_arm_v1" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:include filename="$(find flying_humanoid)/urdf/common.xacro" />
+  <xacro:include filename="$(find flying_humanoid)/urdf/tri_single_arm_v1/robot.urdf" />
+  <xacro:include filename="$(find flying_humanoid)/urdf/tri_single_arm_v1/actuator.urdf" />
+
+  <mujoco>
+    <default>
+      <joint damping="1.0" armature="0.01" />
+    </default>
+    <!-- Keep the static-wrench wall in regenerated MuJoCo models. MuJoCo
+         merges this worldbody section with the robot and included floor. -->
+    <worldbody>
+      <geom name="static_wrench_wall" type="plane" pos="0 0 0" euler="0 ${pi/2} 0"
+            size="0 0 0.05" rgba="0.35 0.45 0.55 0.45" condim="3"
+            contype="1" conaffinity="1" friction="0.7 0.5 0.3" />
+    </worldbody>
+  </mujoco>
+
+  <m_f_rate value="-0.0067" />
+
+  <!-- The rotor_arm frames describe each one-DOF gimbal's zero-thrust coordinate. -->
+  <xacro:rotor_arm id="1" origin="0.04825 0.0975 0.07725" rpy="0 0 ${pi/2}" />
+  <xacro:rotor_arm id="2" origin="0.04825 -0.0975 0.07725" rpy="0 0 ${pi/2}" />
+  <xacro:rotor_arm id="3" origin="-0.089 0.0 0.07725" rpy="0 0 0" />
+
+  <link name="root">
+    <xacro:virtual_inertial />
+  </link>
+  <joint name="root_joint" type="fixed">
+    <parent link="root" />
+    <child link="base_link" />
+    <origin rpy="0 0 0" xyz="0 0 0" />
+    <axis xyz="0 0 1" />
+  </joint>
+</robot>

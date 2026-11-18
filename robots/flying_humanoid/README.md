@@ -2,7 +2,7 @@
 
 English | [日本語](README.ja.md)
 
-A biped with two gimbal rotors on its body. It flies with the gimbalrotor controller, and walks by replaying a
+A biped with selectable two- and three-gimbal-rotor airframes. It flies with the gimbalrotor controller, and walks by replaying a
 trajectory planned by trajectory optimization ([crocoddyl](https://github.com/loco-3d/crocoddyl)), with the rotors
 supporting a part of its weight.
 
@@ -79,6 +79,14 @@ source ~/ros/flying_humanoid_ws/devel/setup.bash
 ```bash
 roslaunch flying_humanoid bringup.launch real_machine:=False simulation:=True headless:=False
 rosrun aerial_robot_base keyboard_command.py   # in another terminal: r to arm, t to take off, l to land
+```
+
+The existing two-rotor airframe is the default (`airframe:=bi`). Select the three-rotor single-arm model with
+`airframe:=tri_single_arm_v1`. Walking is currently supported only by the `bi` model.
+
+```bash
+roslaunch flying_humanoid bringup.launch airframe:=tri_single_arm_v1 \
+  real_machine:=False simulation:=True headless:=False
 ```
 
 ### Walk

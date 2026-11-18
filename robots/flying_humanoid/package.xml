@@ -2,7 +2,7 @@
 <package>
   <name>flying_humanoid</name>
   <version>1.3.6</version>
-  <description>The flying humanoid with two gimbal rotors, controlled by the gimbalrotor controller</description>
+  <description>Flying humanoid airframes with two or three gimbal rotors, controlled by the gimbalrotor controller</description>
 
   <maintainer email="sugihara@jsk.imi.i.u-tokyo.ac.jp">Sugihara Kazuki</maintainer>
   <license>BSD</license>

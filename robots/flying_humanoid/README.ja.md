@@ -2,7 +2,7 @@
 
 [English](README.md) | 日本語
 
-胴体に2つのジンバル付きロータを持つ二足ロボットです。飛行は gimbalrotor の制御器で行います。歩行は、軌道最適化
+2基または3基のジンバル付きロータを選択できる二足ロボットです。飛行は gimbalrotor の制御器で行います。歩行は、軌道最適化
 ([crocoddyl](https://github.com/loco-3d/crocoddyl))で計画した軌道を再生して行い、体重の一部をロータで支えます。
 
 ## 環境構築
@@ -81,6 +81,14 @@ source ~/ros/flying_humanoid_ws/devel/setup.bash
 ```bash
 roslaunch flying_humanoid bringup.launch real_machine:=False simulation:=True headless:=False
 rosrun aerial_robot_base keyboard_command.py   # 別の端末で。r でアーム、t で離陸、l で着陸
+```
+
+既存の2ロータ機がデフォルトです(`airframe:=bi`)。3ロータ・単腕機は `airframe:=tri_single_arm_v1` で選択します。
+現時点で歩行に対応するのは `bi` のみです。
+
+```bash
+roslaunch flying_humanoid bringup.launch airframe:=tri_single_arm_v1 \
+  real_machine:=False simulation:=True headless:=False
 ```
 
 ### 歩行
