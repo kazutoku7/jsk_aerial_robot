@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="airframe" default="tri_single_arm_v1" />
+  <arg name="robot_ns" default="flying_humanoid" />
+  <arg name="robot_model" default="$(find flying_humanoid)/robots/$(arg airframe)/robot.urdf.xacro" />
+  <arg name="ee_offset" default="0.05" />
+  <arg name="ee_axis" default="[1, 0, 0]" />
+  <arg name="offset_id" default="$(eval '{:.3f}m'.format(float(arg('ee_offset'))))" />
+  <arg name="axis_id" default="$(eval arg('ee_axis').strip('[]').replace(',', '_').replace(' ', ''))" />
+  <arg name="result_root" default="$(find flying_humanoid)/results/static_wrench" />
+  <arg name="result_dir" default="$(arg result_root)/offset_$(arg offset_id)" />
+  <arg name="result" default="$(arg result_dir)/axis_$(arg axis_id).yaml" />
+  <arg name="world" default="$(find flying_humanoid)/gazebo/static_wrench.world" />
+  <arg name="gui" default="true" />
+  <arg name="headless" default="false" />
+
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(arg world)" />
+    <arg name="paused" value="true" />
+    <arg name="gui" value="$(arg gui)" />
+    <arg name="headless" value="$(arg headless)" />
+    <arg name="use_sim_time" value="true" />
+  </include>
+
+  <group ns="$(arg robot_ns)">
+    <param name="robot_description"
+           command="$(find xacro)/xacro --inorder $(arg robot_model) robot_name:=$(arg robot_ns)" />
+    <node pkg="flying_humanoid" type="spawn_static_wrench_gazebo.py"
+          name="static_wrench_gazebo_spawner" output="screen">
+      <param name="result" value="$(arg result)" />
+      <param name="model_name" value="$(arg robot_ns)" />
+    </node>
+  </group>
+</launch>

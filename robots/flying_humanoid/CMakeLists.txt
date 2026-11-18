@@ -62,12 +62,15 @@ install(TARGETS flying_humanoid_robot_model flying_humanoid_walk_controller walk
   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
   )
 
-install(DIRECTORY config launch meshes plugins robots urdf
+install(DIRECTORY config gazebo launch meshes plugins robots urdf
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
   USE_SOURCE_PERMISSIONS
   )
 
-catkin_install_python(PROGRAMS scripts/load_initial_joint_states.py scripts/walk_interface.py
+catkin_install_python(PROGRAMS scripts/load_initial_joint_states.py scripts/spawn_static_wrench_gazebo.py
+                               scripts/summarize_static_wrench_results.py
+                               scripts/visualize_static_wrench_result.py
+                               scripts/walk_interface.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
   )
 

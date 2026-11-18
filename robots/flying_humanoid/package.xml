@@ -47,10 +47,15 @@
   <run_depend>controller_manager_msgs</run_depend>
   <run_depend>effort_controllers</run_depend>
   <run_depend>std_srvs</run_depend>
+  <run_depend>geometry_msgs</run_depend>
+  <run_depend>gazebo_msgs</run_depend>
+  <run_depend>gazebo_ros</run_depend>
+  <run_depend>visualization_msgs</run_depend>
   <run_depend>rospy</run_depend>
   <run_depend>rosservice</run_depend>
   <run_depend>robot_state_publisher</run_depend>
   <run_depend>rviz</run_depend>
+  <run_depend>tf2_ros</run_depend>
   <run_depend>xacro</run_depend>
 
   <export>

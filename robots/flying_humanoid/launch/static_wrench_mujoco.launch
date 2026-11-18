@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="airframe" default="tri_single_arm_v1" />
+  <arg name="robot_ns" default="flying_humanoid" />
+  <arg name="model" default="$(find flying_humanoid)/mujoco/$(arg airframe)/robot.xml" />
+  <arg name="ee_offset" default="0.05" />
+  <arg name="ee_axis" default="[1, 0, 0]" />
+  <arg name="offset_id" default="$(eval '{:.3f}m'.format(float(arg('ee_offset'))))" />
+  <arg name="axis_id" default="$(eval arg('ee_axis').strip('[]').replace(',', '_').replace(' ', ''))" />
+  <arg name="result_root" default="$(find flying_humanoid)/results/static_wrench" />
+  <arg name="result_dir" default="$(arg result_root)/offset_$(arg offset_id)" />
+  <arg name="result" default="$(arg result_dir)/axis_$(arg axis_id).yaml" />
+  <arg name="headless" default="false" />
+  <arg name="no_render" default="false" />
+
+  <!-- Paused intentionally: this launch visualizes the optimized static state;
+       it does not apply the optimized contact wrench or actuator commands. -->
+  <group ns="$(arg robot_ns)">
+    <include file="$(find mujoco_ros)/launch/launch_server.launch">
+      <arg name="ns" value="$(arg robot_ns)" />
+      <arg name="modelfile" value="$(arg model)" />
+      <arg name="initial_joint_states" value="$(arg result)" />
+      <arg name="headless" value="$(arg headless)" />
+      <arg name="no_render" value="$(arg no_render)" />
+      <arg name="use_sim_time" value="true" />
+      <arg name="unpause" value="false" />
+    </include>
+  </group>
+</launch>
